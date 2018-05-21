@@ -44,6 +44,13 @@ class ElementPhotoGallery extends BaseElement
     );
 
     /**
+     * @var array
+     */
+    private static $owns = array(
+        'Images'
+    );
+
+    /**
      * @return FieldList
      */
     public function getCMSFields()
@@ -55,6 +62,7 @@ class ElementPhotoGallery extends BaseElement
         if ($this->ID) {
             $config = GridFieldConfig_RecordEditor::create();
             $config->addComponent(new GridFieldOrderableRows('SortOrder'));
+            $config->addComponent(new \Colymba\BulkUpload\BulkUploader());
             $config->removeComponentsByType(GridFieldAddExistingAutocompleter::class);
             $config->removeComponentsByType(GridFieldDeleteAction::class);
             $imagesField = GridField::create('Images', 'Images', $this->Images()->sort('SortOrder'), $config);

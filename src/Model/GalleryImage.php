@@ -48,6 +48,13 @@ class GalleryImage extends BaseElementObject
     /**
      * @var array
      */
+    private static $owned_by = [
+        'PhotoGallery'
+    ];
+
+    /**
+     * @var array
+     */
     private static $summary_fields = array(
         'Image.CMSThumbnail' => 'Image',
         'Title' => 'Title',
@@ -65,6 +72,11 @@ class GalleryImage extends BaseElementObject
      * @var string
      */
     private static $table_name = 'GalleryImage';
+
+    public function populateDefaults()
+    {
+        $this->Name = 'Image';
+    }
 
     /**
      * @return FieldList

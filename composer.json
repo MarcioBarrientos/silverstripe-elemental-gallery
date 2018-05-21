@@ -13,11 +13,18 @@
     ],
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:MarcioBarrientos/GridFieldBulkEditingTools.git"
+        }
+    ],
     "require": {
         "dnadesign/silverstripe-elemental": "^2@dev",
         "dynamic/silverstripe-elemental-baseobject": "^1@dev",
         "silverstripe/recipe-cms": "^1.0@dev",
-        "silverstripe/vendor-plugin": "^1.0@dev"
+        "silverstripe/vendor-plugin": "^1.0@dev",
+        "colymba/gridfield-bulk-editing-tools": "dev-fix"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7",
