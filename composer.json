@@ -24,7 +24,7 @@
         "dynamic/silverstripe-elemental-baseobject": "^1@dev",
         "silverstripe/recipe-cms": "^1.0@dev",
         "silverstripe/vendor-plugin": "^1.0@dev",
-        "colymba/gridfield-bulk-editing-tools": "dev-fix"
+        "colymba/gridfield-bulk-editing-tools": "3.x-dev"
     },
     "require-dev": {
         "phpunit/PHPUnit": "^5.7",
